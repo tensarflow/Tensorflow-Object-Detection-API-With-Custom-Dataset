@@ -28,10 +28,18 @@ FLAGS = flags.FLAGS
 
 # TO-DO replace this with label map
 def class_text_to_int(row_label):
-    if row_label == 'apple':
+    if row_label == 'STM':
         return 1
+    elif row_label == 'METU':
+        return 2
+    elif row_label == 'TR':
+        return 3
+    elif row_label == 'ORT':
+        return 4
+    elif row_label == 'LANDING':
+        return 5
     else:
-        return 0
+        return None
 
 def split(df, group):
     data = namedtuple('data', ['filename', 'object'])
